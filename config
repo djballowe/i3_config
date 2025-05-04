@@ -199,4 +199,4 @@ client.focused          #A7C080 #A7C080 #A7C080 #A7C080 #A7C080
 gaps inner 5px
 
 # set mouse acceleration
-exec_always xinput --set-prop 16 'libinput Accel Speed' -0.9
+exec_always --no-startup-id /home/david/.config/i3/scripts/set_mouse.sh
