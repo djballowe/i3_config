@@ -188,7 +188,7 @@ exec_always --no-startup-id ~/.config/i3/polybar/launch.sh
 exec mullvad-vpn
 
 # wallpaper
-exec_always feh --bg-scale ~/papes/death_stranding_2.jpg
+exec_always feh --bg-scale ~/Pictures/papes/death_stranding_2.jpg
 
 # borders
 for_window [class="^.*"] border pixel 1
@@ -200,3 +200,12 @@ gaps inner 5px
 
 # set mouse acceleration
 exec_always --no-startup-id /home/david/.config/i3/scripts/set_mouse.sh
+
+# open terminal browser and plex
+assign [class="Alacritty"] workspace number 1
+assign [class="Brave-browser"] workspace number 2
+assign [class="firefox"] workspace number 3
+
+exec --no-startup-id alacritty
+exec --no-startup-id brave
+exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://app.plex.tv/desktop/#!/media/f6e55ce3f3510b6a2219e69660932d5e1ae20dc9/com.plexapp.plugins.library?source=3' &"
