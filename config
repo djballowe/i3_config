@@ -23,12 +23,11 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
+# idle timeout 5 minutes
+exec_always --no-startup-id xset s 300
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# lock screen with slock
+exec_always --no-startup-id xss-lock -- slock
 
 # make mouse chill
 exec --no-startup-id xinput set-prop 'pointer:Logitech MX Vertical' 'libinput Accel Speed' -0.8
@@ -201,7 +200,7 @@ gaps inner 5px
 # set mouse acceleration
 exec_always --no-startup-id /home/david/.config/i3/scripts/set_mouse.sh
 
-# open terminal browser and plex
+# open terminal, browser, and plex dashboard on start
 assign [class="Alacritty"] workspace number 1
 assign [class="Brave-browser"] workspace number 2
 assign [class="firefox"] workspace number 3
@@ -209,3 +208,6 @@ assign [class="firefox"] workspace number 3
 exec --no-startup-id alacritty
 exec --no-startup-id brave
 exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://app.plex.tv/desktop/#!/media/f6e55ce3f3510b6a2219e69660932d5e1ae20dc9/com.plexapp.plugins.library?source=3' &"
+
+# lock screen shortcut
+bindsym $mod+Shift+m exec slock
