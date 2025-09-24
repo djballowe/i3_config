@@ -207,7 +207,7 @@ assign [class="firefox"] workspace number 3
 
 exec --no-startup-id alacritty
 exec --no-startup-id brave
-exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://app.plex.tv/desktop/#!/media/f6e55ce3f3510b6a2219e69660932d5e1ae20dc9/com.plexapp.plugins.library?source=3' &"
+exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.tars.com' &"
 
 # lock screen shortcut
 bindsym $mod+Shift+m exec slock
