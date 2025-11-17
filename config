@@ -209,7 +209,7 @@ assign [class="firefox"] workspace number 4
 exec --no-startup-id alacritty
 exec --no-startup-id mullvad-browser 
 exec --no-startup-id "nohup mullvad-exclude brave &"
-exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.tars.server' &"
+exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.ig88-b.app' &"
 
 # lock screen shortcut
 bindsym $mod+Shift+m exec slock
