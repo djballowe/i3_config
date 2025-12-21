@@ -203,14 +203,12 @@ exec_always --no-startup-id /home/david/.config/i3/scripts/set_mouse.sh
 # open programs on start
 assign [class="Alacritty"] workspace number 1
 assign [class="Brave-browser"] workspace number 2
-assign [class="Mullvad Browser"] workspace number 3
-assign [class="firefox"] workspace number 4
-assign [class="steam"] workspace number 5
+assign [class="firefox"] workspace number 3
+assign [class="steam"] workspace number 4
 
 exec --no-startup-id alacritty
-exec --no-startup-id mullvad-browser 
 exec --no-startup-id "nohup mullvad-exclude brave &"
-exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.ig88-b.app' &"
+exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.ig88-b.app' 'https://discord.com/channels/@me' &"
 exec --no-startup-id sh -c "nohup mullvad-exclude steam &"
 
 # lock screen shortcut
