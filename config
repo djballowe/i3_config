@@ -208,7 +208,7 @@ assign [class="steam"] workspace number 4
 
 exec --no-startup-id alacritty
 exec --no-startup-id "nohup mullvad-exclude brave &"
-exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.ig88-b.app' 'https://discord.com/channels/@me' &"
+exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.ig88-b.app' &"
 exec --no-startup-id sh -c "nohup mullvad-exclude steam &"
 
 # lock screen shortcut
