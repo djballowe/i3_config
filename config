@@ -197,9 +197,6 @@ client.focused          #A7C080 #A7C080 #A7C080 #A7C080 #A7C080
 # thigh gaps
 gaps inner 5px
 
-# set mouse acceleration
-exec_always --no-startup-id /home/david/.config/i3/scripts/set_mouse.sh
-
 # open programs on start
 assign [class="Alacritty"] workspace number 1
 assign [class="Brave-browser"] workspace number 2
