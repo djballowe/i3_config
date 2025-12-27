@@ -197,16 +197,17 @@ client.focused          #A7C080 #A7C080 #A7C080 #A7C080 #A7C080
 # thigh gaps
 gaps inner 5px
 
-# open programs on start
+# solaar no window (mouse settings)
+exec --no-startup-id "noup solaar -w hide"
+
+# open programs and assign windows on start
 assign [class="Alacritty"] workspace number 1
 assign [class="Brave-browser"] workspace number 2
 assign [class="firefox"] workspace number 3
-assign [class="steam"] workspace number 4
 
 exec --no-startup-id alacritty
 exec --no-startup-id "nohup mullvad-exclude brave &"
 exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.ig88-b.app' &"
-exec --no-startup-id sh -c "nohup mullvad-exclude steam &"
 
 # lock screen shortcut
 bindsym $mod+Shift+m exec slock
