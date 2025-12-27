@@ -29,9 +29,6 @@ exec_always --no-startup-id xset s 300
 # lock screen with slock
 exec_always --no-startup-id xss-lock -- slock
 
-# make mouse chill
-exec --no-startup-id xinput set-prop 'pointer:Logitech MX Vertical' 'libinput Accel Speed' -0.8
-
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
