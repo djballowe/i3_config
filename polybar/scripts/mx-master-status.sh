@@ -1,12 +1,15 @@
 #!/usr/bin/env bash
 
+COLOR="%{F#A7C080}"
+END="%{F-}"
+
 solaar_source_path="/home/david/build/Solaar/bin/solaar"
 battery_string=$("$solaar_source_path" show | sed -n '/1: MX Master 3S/,/Battery/p' | grep Battery)
 battery_percent=$(echo "$battery_string" | awk '{sub(/%/, ""); sub(/,/, ""); print $2}')
 battery_status=$(echo "$battery_string" | awk '{sub(/\./, " "); sub(/\./, ""); print $4}')
 
 if [[ ! $battery_percent =~ ^[0-9]+$ ]]; then
-    echo "%{F#A7C080}󰂃 %{F-}--"
+    echo "$COLOR󰂃 $END--"
     exit 1
 fi
 
@@ -22,4 +25,4 @@ if [ "$battery_status" == "RECHARGING" ]; then
     icon="󰂄"
 fi
 
-echo "%{F#A7C080}$icon%{F-} $battery_percent%"
+echo "$COLOR$icon$END $battery_percent%"
