@@ -5,8 +5,8 @@ battery_string=$("$solaar_source_path" show | sed -n '/1: MX Master 3S/,/Battery
 battery_percent=$(echo "$battery_string" | awk '{sub(/%/, ""); sub(/,/, ""); print $2}')
 battery_status=$(echo "$battery_string" | awk '{sub(/\./, " "); sub(/\./, ""); print $4}')
 
-if [[ -z "$battery_percent" ]]; then
-    echo "󰂃 --"
+if [[ ! $battery_percent =~ ^[0-9]+$ ]]; then
+    echo "%{F#A7C080}󰂃 %{F-}--"
     exit 1
 fi
 
