@@ -202,7 +202,8 @@ assign [class="firefox"] workspace $ws3
 
 exec --no-startup-id alacritty
 exec --no-startup-id "nohup mullvad-exclude brave &"
-exec --no-startup-id sh -c "nohup mullvad-exclude firefox 'https://homepage.ig88-b.app' &"
+exec --no-startup-id sh -c "nohup mullvad-exclude firefox --new-window 'https://homepage.ig88-b.app' &"
+exec --no-startup-id sh -c "nohup mullvad-exclude firefox --new-window &"
 
 # solaar no window (mouse settings)
 exec --no-startup-id "nohup /home/david/build/Solaar/bin/solaar -w hide &"
